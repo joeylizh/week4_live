@@ -2,6 +2,8 @@
 
 ## Reproduce 
 
+### package versions
+
 ```{r}
 # i have taken a snapshot with
 #renv::snapshot()
@@ -9,7 +11,12 @@
 #install the same packages
 #renv::restore()
 ```
+### Read in data:
 
+Located within the Data folder:
+
+* HDI data from: http://hdr.undp.org/en/indicators/68606#
+* Shapefile from: https://hub.arcgis.com/datasets/2b93b06dc0dc4e809d3c8db5cb96ba69_0/explore?location=-2.688200%2C0.000000%2C1.41 
 
 ## Load packages
 ```{r}
@@ -19,10 +26,6 @@ library(here)
 library(janitor)
 library(countrycode)
 ```
-## Read in data - it's in the Data folder:
-
-* HDI data from: http://hdr.undp.org/en/indicators/68606#
-* Shapefile from: https://hub.arcgis.com/datasets/2b93b06dc0dc4e809d3c8db5cb96ba69_0/explore?location=-2.688200%2C0.000000%2C1.41 
 
 ```{r}
 HDI <- read_csv(here::here("Data", "Gender Inequality Index (GII).csv"),
