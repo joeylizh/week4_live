@@ -4,7 +4,7 @@
 
 ### package versions
 
-```{r}
+```{r first, eval=FALSE}
 # i have taken a snapshot with
 #renv::snapshot()
 
@@ -46,9 +46,10 @@ HDIcols<- HDI %>%
   select(country, x2019, x2010)%>%
   mutate(difference=x2019-x2010)%>%
   slice(1:189,)%>%
-  mutate(iso_code=countrycode(HDIcols$country, origin = 'country.name', destination = 'iso2c'))
+  mutate(iso_code=countrycode(country, origin = 'country.name', destination = 'iso2c'))
+  
 
-#this was just a test. 
+#this was just a test. hello
 #t <- countrycode(HDIcols$country, origin = 'country.name', destination = 'iso2c') 
 
 ```
