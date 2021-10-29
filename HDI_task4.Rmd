@@ -66,5 +66,5 @@ Join_HDI <- World %>%
             by = c("aff_iso" = "iso_code"))
 ```
 
-...next time 
+...next time we will make a map using different repos
 
